@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="scripts/angular.js"></script>
+        <script src="scripts/customscripts.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <div >
+            <div ng-controller="myController" style="font-size:2em; color:red">
+                First Name of Employee : {{ chandu.firstname }} </br>
+                Last Name of Employee : {{ chandu.lastname }}</br>
+                Phone Number of Employee : {{ chandu.phNo }}</br>
+            </div>
+        </div></br></br></br>
+
+        <div>
+            <div ng-controller="myAppController" style="font-size:2em">
+                First Name of Student : {{ student.firstname }}</br>
+                Last Name of Student : {{ student.lastname }}</br>
+                E-mail of Student : {{ student.Email }}</br>
+            </div>
+        </div>
+    
+    </body>
+</html>
