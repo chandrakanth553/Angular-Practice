@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="scripts/angular.js"></script>
+        <script src="scripts/customscripts.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="myController">
+        <div style="font-size:2em">
+            Name: {{ India.name }}
+        </div>
+        <div style="font-size:2em">
+            Capital: {{ India.capatial }}
+        </div>
+        </br>
+        <div>
+            <img src="{{ India.flag }}" alt="{{ India.name + ' Flag' }}" style="height:200px; width:300px">
+            This wil cause Error Because SRC can not load When dom elements are loaded. It will load after FUnctionality loaded
+            
+        </div>
+        </br>
+        </br>
+        </br>
+        <div>
+            <img ng-src="{{ India.flag }}" alt="{{ India.name + ' Flag' }}" style="height:200px; width:300px">
+            Using ng-src you will load dom Elememnts without Error.
+        </div>
+
+        </div>
+    </body>
+</html>
