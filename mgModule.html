@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="scripts/angular.js"></script>
+        <script src="scripts/custom.js"></script>
+    </head>
+    <body ng-app="myApp">
+          <div ng-controller="myController">
+            <input type="text" ng-model="chandu" style="height:30px; width:400px "/></br></br>
+            </br>
+            </br>
+            you can use ng-model for text input, Select, textarea
+           <h1> {{ chandu }} </h1>
+        </div>
+
+        <div>
+           <h1 style="background-color:beige; color:red; width:400px"> Ng- Model With Complex Object</h1>
+        </div>
+        <div ng-controller="myAppController">
+            <div>
+                First Name: <input type="text"  ng-model="employee.firstname"/>
+             </div>
+        <div>
+            Last Name: <input type="text"  ng-model="employee.lastname"/>
+        </div>
+        <div>
+            Email : <input type="text"  ng-model="employee.Email" />
+        </div>
+        <div>
+            First Name: {{ employee.firstname }}
+        </div>
+        <div>
+            Last Name: {{ employee.lastname }}
+        </div>
+        <div>
+            Email : {{ employee.Email }}
+        </div>
+        </div>
+        </body>
+</html>
