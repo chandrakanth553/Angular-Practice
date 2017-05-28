@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="scripts/angular.js"></script>
+        <script src="scripts/custom.js"></script>
+    </head>
+    <body ng-app="myModule">
+        <div ng-controller="myController">
+            First Initilize the server using http-server command in terminal and Proceeed for Operation 
+            <select ng-model="view">
+                <option value="listView.html">List View</option>
+                 <option value="tableView.html">table View</option>
+            </select>
+            <div ng-include="view">
+                
+            </div>
+        </div>
+    </body>
+</html>
