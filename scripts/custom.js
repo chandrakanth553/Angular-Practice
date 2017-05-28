@@ -26,4 +26,12 @@ var myApp = angular
 
             $scope.employees = employees;
             $scope.sorting = 'name';
+            $scope.reverseformat = false;
+
+            $scope.soringcolumn= function(column){
+               $scope.reverseformat= ($scope.sorting==column) ? !$scope.reverseformat : false ;
+               $scope.sorting=column;
+            };
+
+        
             });

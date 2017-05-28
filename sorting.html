@@ -9,24 +9,18 @@
     </head>
     <body ng-app="myApp">
         <div ng-controller="myController">
-            <select ng-model="sorting">
-                <option value="name">Name ASC</option>
-                <option value="dateofbirth">Date of Birth ASC</option>
-                <option value="gender"> Gender ASC</option>
-                <option value="-salary"> Salary DSC</option>
-            </select>
             <table>
                 <thead>
-                    <th>
+                    <th ng-click="soringcolumn(name)" style="cursor:pointer">
                         Name
                     </th>
-                    <th>
+                    <th ng-click="soringcolumn(dateOfBirth)" style="cursor:pointer">
                         Date of Birth
                     </th>
-                    <th>
+                    <th ng-click="soringcolumn(gender)" style="cursor:pointer">
                         Gender
                     </th>
-                    <th>
+                    <th ng-click="soringcolumn(salary)" style="cursor:pointer">
                         Salary
                     </th>
                 </thead>
