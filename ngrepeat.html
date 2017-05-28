@@ -45,11 +45,13 @@
         <h1> <strong>ng-repeat</strong> with Nested loop </h1>
         <div>
             <ul>
-                <li ng-repeat="country in count">
-                    {{ country.name }}
+                <li ng-repeat="country in count" ng-init="parent = $index">
+                    {{ country.name }} -  Index = {{ parent }}
                     <ul>
-                        <li ng-repeat="city in country.cities">
+                        <li ng-repeat="city in country.cities" ng-init="child = $Index">
                             {{city.name}}
+                            Parent-Index= {{parent}}
+                            Index = {{ child }}
                         </li>
                     </ul>
                 </li>
