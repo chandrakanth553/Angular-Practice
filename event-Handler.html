@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="scripts/angular.js"></script>
+        <script src="scripts/custom.js"></script>
+
+    </head>
+    <body ng-app="myApp">
+        <table ng-controller="myController">
+            <thead>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Likes
+                </th>
+                <th>
+                    Dislikes
+                </th>
+                <th>
+                    Likes/Dislikes
+                </th>
+            </thead>
+            <tr ng-repeat="lunguage in lunguages">
+                <td>
+                    {{ lunguage.name }}
+                </td>
+                <td>
+                    {{ lunguage.likes }}
+                </td>
+                <td>
+                    {{ lunguage.dislikes }}
+                </td>
+                <td>
+                    <input type="button" value="Like" ng-click="incrementLikes(lunguage)"/>
+                    <input type="button" value="Dislike" ng-click="decrementLikes(lunguage)"/>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
