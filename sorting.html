@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="scripts/angular.js"></script>
+        <script src="scripts/custom.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="myController">
+            <select ng-model="sorting">
+                <option value="name">Name ASC</option>
+                <option value="dateofbirth">Date of Birth ASC</option>
+                <option value="gender"> Gender ASC</option>
+                <option value="-salary"> Salary DSC</option>
+            </select>
+            <table>
+                <thead>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Date of Birth
+                    </th>
+                    <th>
+                        Gender
+                    </th>
+                    <th>
+                        Salary
+                    </th>
+                </thead>
+                <tr ng-repeat="employee in employees | orderBy:sorting">
+                    <td>
+                        {{employee.name}}
+                    </td>
+                    <td>
+                        {{employee.dateOfBirth | date:"dd/MM/yy"}}
+                    </td>
+                    <td>
+                        {{employee.gender}}
+                    </td>
+                    <td>
+                        {{employee.salary}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
