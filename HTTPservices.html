@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="scripts/angular.js"></script>
+        <script src="scripts/custom.js"></script>
+    </head>
+    <body ng-app="myModule">
+        <div ng-controller="myController">
+            <div>
+                {{error}}
+            </div>
+            <div>
+                <table>
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tr ng-repeat="employee in employees">
+                        <td>{{employee.id}}</td>
+                        <td> {{employee.name}} </td>
+                        <td> {{employee.gender}} </td>
+                        <td> {{employee.salary}} </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
