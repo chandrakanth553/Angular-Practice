@@ -1,6 +1,15 @@
-var app = angular
-        .module("myModule", [])
-        .controller("myController", function ($scope) {
+var demoApp = angular.module("demoApp", [])
+                     .controller("countryController",
+                        function ($scope, $location, $anchorScroll) {
+                        //  $http.get("CountryService.asmx/GetData")
+                        //       .then(function (response) {
+                        //           $scope.countries = response.data;
+                        //       });
+                              var countries = [{"Id":1,"Name":"India","Cities":[{"Id":1,"Name":"Mumbai","CountryId":1},{"Id":2,"Name":"Delhi","CountryId":1},{"Id":3,"Name":"Bangalore","CountryId":1},{"Id":4,"Name":"Chennai","CountryId":1},{"Id":5,"Name":"Hyderabad","CountryId":1}]},{"Id":2,"Name":"USA","Cities":[{"Id":6,"Name":"New York","CountryId":2},{"Id":7,"Name":"Los Angeles","CountryId":2},{"Id":8,"Name":"Chicago","CountryId":2},{"Id":9,"Name":"Houston","CountryId":2},{"Id":10,"Name":"Philadelphia","CountryId":2}]},{"Id":3,"Name":"UK","Cities":[{"Id":11,"Name":"London","CountryId":3},{"Id":12,"Name":"Birmingham","CountryId":3},{"Id":13,"Name":"Coventry","CountryId":3},{"Id":14,"Name":"Liverpool","CountryId":3},{"Id":15,"Name":"Manchester","CountryId":3}]}];
+                        $scope.countries =countries;
+                         $scope.scrollTo = function (countryName) {
+                             $location.hash(countryName);
+                             $anchorScroll();
+                         }
 
-            
-        });
+                     });
